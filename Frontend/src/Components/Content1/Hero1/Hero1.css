@@ -1,0 +1,204 @@
+.Hero1 {
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(221, 232, 241, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+  
+  .pero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    gap: 20px;
+  }
+  
+  .zero {
+    display: flex;
+    flex-direction: column; /* Stack items on small screens */
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .hero {
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  .hero-img {
+    width: 100%;
+    max-width: 300px; /* Limit image size */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-img img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Prevent image from being too tall */
+    object-fit: contain;
+  }
+  
+  .htext1 {
+    font-size:5vw/* Dynamically adjust text size */;
+    text-transform: uppercase;
+    color: rgba(6, 194, 223, 0.975);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+  
+  .htext2 {
+    /* font-size: 30px; */
+     /* Adjusts font size based on viewport width */
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+  }
+    
+      
+
+  .htext3 {
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Dynamically adjust text size */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .hbutton button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .hbutton button:hover {
+    background-color: rgba(6, 194, 223, 0.975);
+  }
+  
+  /* Mobile and Tablet adjustments */
+  @media (max-width: 768px) {
+    .Hero1 {
+      /* height: 100vh;  */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    .zero {
+      flex-direction: column; /* Stack text and image */
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .hero-img {
+      max-width: 250px; /* Reduce image size */
+      margin-top: 15px;
+    }
+  
+    .hero-img img {
+      max-height: 250px; /* Limit image height */
+    }
+  
+    .htext1 {
+      font-size: clamp(0.7rem, 2.5vw, 0.9rem); /* Adjust font size */
+    }
+  
+    .htext2 {
+      font-size: 2vw; /* Adjust heading size */
+    }
+  
+    .htext3 {
+      font-size: clamp(0.7rem, 2vw, 0.9rem); /* Adjust secondary text */
+    }
+  
+    .hbutton button {
+      font-size: 0.8rem;
+      max-width: 130px; /* Adjust button width */
+    }
+  }
+  
+  /* Smallest phone screens adjustments */
+  @media (max-width: 480px) {
+    /* .Hero1 {
+      /* height: 100vh; Fullscreen */
+    /* } */ */
+  
+    .zero {
+      gap: 10px; /* Reduce gap between items */
+    }
+  
+    .hero-img {
+      max-width: 200px; /* Limit image size */
+      margin-top: 10px;
+    }
+  
+    .hero-img img {
+      max-height: 200px; /* Limit image height further */
+    }
+  
+    .htext1 {
+      font-size: clamp(0.6rem, 3vw, 0.7rem); /* Even smaller font size */
+    }
+  
+    .htext2 {
+      font-size:10px; /* Adjust text size */
+    }
+  
+    .htext3 {
+      font-size: clamp(0.7rem, 3vw, 0.8rem); /* Adjust text size */
+    }
+  }
+  
+  /* Desktop (above 1024px) */
+  @media (min-width: 1024px) {
+    .Hero1 {
+      height: auto;
+      padding: 30px;
+    }
+  
+    .zero {
+      flex-direction: row; /* Align items horizontally on larger screens */
+      justify-content: space-between;
+      gap: 40px; /* More gap between text and image */
+      align-items: center;
+    }
+  
+    .hero-img {
+      max-width: 400px; /* Larger image on desktop */
+      margin-top: 0;
+    }
+  
+    .hero-img img {
+      max-height: 400px; /* Adjust image height */
+    }
+  
+    .htext1,
+    .htext2,
+    .htext3 {
+      text-align: left;
+    }
+  
+    .hbutton button {
+      font-size: 1rem;
+      max-width: 180px; /* Larger button */
+    }
+  }
+  

@@ -1,0 +1,245 @@
+/* .Products{
+    width: 100vw;
+    background-color: rgba(221, 232, 241);
+}
+
+.bg{
+    display: flex;
+    align-items: center;
+    margin: 0 140px;
+    padding-top: 20px;
+}
+
+.img1{
+    max-height: 200px;
+    position: relative;
+    left: 100px;
+}
+
+.img1 img{
+    height: 200px;
+    width: 400px;
+}
+
+.txt2{
+    width: 500px;
+}
+
+.txt2 p{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.My-Products {
+    font-family: Arial, sans-serif;
+  }
+  
+  .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1.7fr));
+    gap: 20px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  
+  .article-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  
+  
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .article-body {
+    padding: 16px;
+  }
+  
+  .article-body h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  
+  .article-body p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .article-body button{
+    padding: 8px;
+    border: 1px solid;
+    color: white;
+    background-color: rgba(1, 116, 1, 0.895);
+    border-radius: 3px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  } */
+
+/* General Styles */
+.Products {
+  width: 100%;
+  background-color: rgba(221, 232, 241);
+  padding: 20px 0;
+}
+
+/* Container for Text and Image */
+.bg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit container width */
+  padding: 20px;
+}
+
+.txt2 {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.txt2 p {
+  font-size: clamp(18px, 2.5vw, 35px); /* Responsive font size */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+.img1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img1 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Product Grid */
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-body {
+  padding: 16px;
+  text-align: center;
+}
+
+.article-body h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.article-body p {
+  font-size: 14px;
+  color: #555;
+}
+
+.article-body button {
+  padding: 8px;
+  border: none;
+  color: white;
+  background-color: rgba(1, 116, 1, 0.895);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.article-body button:hover {
+  background-color: rgba(0, 100, 0, 0.9);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .bg {
+    flex-direction: column; /* Stack text and image */
+    text-align: center;
+    padding: 10px;
+  }
+
+  .txt2, .img1 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .img1 img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .txt2 p {
+    font-size: clamp(16px, 4vw, 28px); /* Reduce font size */
+  }
+
+  .box {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px;
+  }
+
+  .img1 img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .txt2 p {
+    font-size: clamp(14px, 5vw, 24px);
+  }
+
+  .img1 img {
+    max-width: 200px; /* Further reduce image size */
+  }
+
+  .article-body button {
+    font-size: 14px;
+    padding: 6px;
+  }
+}

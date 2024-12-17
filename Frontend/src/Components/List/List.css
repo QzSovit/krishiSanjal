@@ -1,0 +1,218 @@
+/* .List {
+    width: 100%;
+}
+
+.Listto {
+    margin: 20px;
+}
+
+.Listcol {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #b2d8e5;
+}
+
+.Listcol p {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 40px;
+}
+
+.List-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.List-table th,
+.List-table td {
+    border: 2px solid rgba(1, 116, 1, 0.895);
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.List-table th {
+    background-color: #f4f4f4;
+    font-size: 16px;
+}
+
+.List-table td {
+    font-size: 14px;
+}
+
+.no-products {
+    text-align: center;
+    color: #2c2828;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    padding: 40px;
+    height: 100px;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.list-format {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-format img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.list-format p {
+    margin: 0 5px;
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.edit {
+    background-color: rgba(1, 116, 1, 0.895);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100px;
+}
+
+button.edit:hover {
+    background-color: #45a049;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100px;
+}
+
+button.delete:hover {
+    background-color: #e41f1f;
+}
+
+button.edit,
+button.delete {
+    margin-left: 20px;
+} */
+
+/* Basic Styles */
+.List {
+    padding: 20px;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.Listto {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.Listcol {
+    margin-bottom: 20px;
+}
+
+.List-table {
+    width: 100%; /* Ensure table fits within its container */
+    border-collapse: collapse; /* Remove gaps between table cells */
+    table-layout: fixed; /* Ensure consistent column widths */
+    word-wrap: break-word; /* Allow breaking long words */
+}
+
+.List-table th, .List-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-break: break-word; /* Break long text when needed */
+}
+
+.List-table th {
+    background-color: #f4f4f4;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Maintain aspect ratio while cropping */
+    max-width: 100%; /* Prevent image overflow */
+}
+
+/* Mobile and Tablet Views */
+@media screen and (max-width: 768px) {
+    .List-table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .List-table th, .List-table td {
+        padding: 8px;
+    }
+
+    .product-image {
+        width: 40px;
+        height: 40px; /* Resize images for small screens */
+    }
+}
+
+/* Large Desktop Views */
+@media screen and (min-width: 1200px) {
+    .List-table th, .List-table td {
+        padding: 15px; /* Add spacing for larger screens */
+    }
+
+    .product-image {
+        width: 60px;
+        height: 60px; /* Resize images for larger screens */
+    }
+}
+
+/* Extra Small Mobile Views */
+@media screen and (max-width: 480px) {
+    .List-table {
+        font-size: 12px; /* Smaller font size for very small screens */
+    }
+
+    .List-table th, .List-table td {
+        padding: 6px; /* Reduce padding to fit smaller screens */
+    }
+
+    .product-image {
+        width: 30px;
+        height: 30px; /* Resize images further */
+    }
+
+    .Listcol {
+        padding: 0 10px; /* Adjust column padding */
+    }
+}
+
+/* Scroll Handling */
+.List {
+    overflow-x: auto; /* Ensure horizontal scrolling for narrow screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+}
